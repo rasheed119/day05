@@ -26,3 +26,17 @@ const palindrome = (arr)=>{
 }
 var arr = ["malayalam","stone","wow","son","madam"];
 console.log(palindrome(arr));
+
+//IIFE
+
+(function(){
+    var arr = ["malayalam","stone","wow","son","madam"];
+    var result = [];
+    for(var i = 0 ; i < arr.length ; i++){
+        var reverse_string = arr[i].split("").reverse().join("");
+        if(reverse_string==arr[i]){
+            result.push(arr[i])
+        }
+    }
+    console.log(result);
+})()
